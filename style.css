@@ -6,7 +6,7 @@
     background-attachment: fixed;
 }
 
-#searchBar, h1, #map {
+#searchBar, h1, img {
     display: flex;
     flex-direction: row;
     justify-content: center;

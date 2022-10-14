@@ -1,4 +1,15 @@
-let button = document.querySelector("#searchButton")
+//https://www.w3schools.com/html/html5_geolocation.asp
+let locationFinder = document.querySelector(#locationFinder)
+locationFinder.addEventListener("click", locationFinder)
+
+const findLocation () => {
+    arguments.getCurrentPosition(pullValue)
+}
+const pullValue () => {
+    locationFinder.text = `Your latitude is ${coords.latitude} and your longitude is ${coords.longitude}. Yes, you need that negative sign`
+}
+
+let searchButton = document.querySelector("#searchButton")
 
 async function getData (search) {
     search.preventDefault()
@@ -44,4 +55,4 @@ async function getData (search) {
 }
 
 //button runs search
-button.addEventListener("click", getData)
+searchButton.addEventListener("click", getData)
