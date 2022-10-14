@@ -1,4 +1,12 @@
-#searchBar {
+/*Referenced w3schools & classwork's resume lab for gradient, fixed no repeat cover*/
+*{
+    background-image: linear-gradient(to top right, #0086d3, #fcffae);
+    background-repeat: no-repeat, repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+
+#searchBar, h1, #map {
     display: flex;
     flex-direction: row;
     justify-content: center;
