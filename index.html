@@ -1,0 +1,45 @@
+<!--Notes Here-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel = "stylesheet" href="style.css">
+    <title>Weather</title>
+
+</head>
+<body>
+
+
+<form id="searchBar">
+
+<input type="text"
+        placeholder = "latitude"
+        id="latitude"
+        style="width: 20%"
+        value="" />
+
+<input type="text"
+        placeholder = "longitude"
+        id="longitude"
+        style="width: 20%"
+        value="" />
+
+<input type="button"
+        id="searchButton"
+        value="Search"
+        />
+
+    </form>
+
+
+
+<ul>
+    <li>Time Zone: <h4 id="timezone"></h4></li>
+    <li>Sunrise: <h4 id="sunrise"></h4></li>
+    <li>Sunset: <h4 id="sunset"></h4></li>
+</ul>
+
+<script src="script.js"></script>
+</body>
+</html>
