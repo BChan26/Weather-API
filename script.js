@@ -1,4 +1,4 @@
-//Geolocation code based on https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude
+//Geolocation based on https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude and https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation with lots of new key terms
 const locationFinder = () => {
     navigator.geolocation.getCurrentPosition((position) => {
         let calculatedLatAndLong = document.querySelector("#calculatedLatAndLong")
@@ -10,9 +10,7 @@ myLocation.addEventListener("click", locationFinder)
 
 
 
-
-
-//Display latitude/longitude map
+//Function to display latitude/longitude map
 //https://www.w3schools.com/jsref/prop_style_display.asp
 const showMap = () => {
     document.querySelector("#map").style.display = `flex`
@@ -111,13 +109,26 @@ async function getData (search) {
         let snowfall = document.querySelector("#snowfall")
         snowfall.innerText = res.daily.snowfall_sum[0]
 
+        const addCellValues = () => {
+            let dataTable = document.querySelector("#cellAll")
+            
+            for (let i=0; i < res.daily.time.length; i ++) {
+                let row1 = `<tr>
+                            <td>${res.daily.time[i]}</td>
+                            </tr>`
+                dataTable.innerHTML += row1
+                console.log(dataTable.innerHTML)
+            }
+            }
+        addCellValues()
+
     })
 
-    //needed, as discussed in the mini-lesson
+    //needed for errors, as discussed in the mini-lesson
     .catch(err => {
         console.log(`Error!`, err)
     })
 }
 
-//search button, upon click runs the getData function for results
+//search button, upon click runs the getData function for results, comes after
 searchButton.addEventListener("click", getData)

@@ -29,7 +29,7 @@
 <hr>
 
 <!--Buttons to Show and Hide Map-->
-<p id="explanationForMap">Without using location data, find them with this map instead:</p>
+<p id="explanationForMap">Without using location data, find them with this map:</p>
 <form id="toggleMap">
 <input type = "button"
         id="buttonToggleMap"
@@ -55,7 +55,7 @@
         style="width: 20%"
         value="" />
 <input type="text"
-        placeholder = "Longitude"
+        placeholder = "Longitude (Include the - sign)"
         id="longitude"
         style="width: 20%"
         value="" />
@@ -79,6 +79,27 @@
     <li>Snowfall (cm): <h4 id="snowfall"></h4></li>
     
 </ul>
+
+<!--Work in Progress, could I use a for loop for the function to get the values AND assign each one to a new cell? -->
+<h2>Work in Progress ↓ </h2>
+<table class="sevenDay">
+        <thead>
+                <tr>
+                        <th>Date</th>
+                        <th>Day 1</th>
+                        <th>Day 2</th>
+                        <th>Day 3</th>
+                        <th>Day 4</th>
+                        <th>Day 5</th>
+                        <th>Day 6</th>
+                        <th>Day 7</th>
+                </tr>
+        </thead>
+
+        <tbody id="cellAll">
+                
+        </tbody>
+</table>
 
 <!--Links HTML to Javascript-->
 <script src="script.js"></script>

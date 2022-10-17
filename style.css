@@ -4,7 +4,7 @@
     background-attachment: fixed;
 }
 
-/*Centering*/
+/*Centering using flex box*/
 h1, #locator, #calculatedLatAndLong, #explanationForMap, #toggleMap, #map, #searchBar {
     display: flex;
     flex-direction: row;
@@ -15,3 +15,7 @@ h1, #locator, #calculatedLatAndLong, #explanationForMap, #toggleMap, #map, #sear
 #map{
     display: none
 }
+
+/*Referenced tic-tac-toe homework, to get a border for the table and cells*/
+table, tr, td {
+    border: 1px solid rgb(65, 87, 75);}
