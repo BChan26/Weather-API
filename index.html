@@ -1,58 +1,66 @@
-<!--Notes Here-->
+<!--Notes-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Links HTML to CSS-->
     <link rel = "stylesheet" href="style.css">
+    <!--Info on Tab-->
     <title>Weather Forecast</title>
     <link rel="icon" href="Assets/icon.webp">
 </head>
 
 <body>
+
+<!--Title-->
 <h1>Your Weather Forecast</h1>
 
+<!--Map-->
 <div id="traditional">
 <img src="Assets/Transparent Map.png"/>
 </div>
+
+<!--Line Break-->
 <hr>
 
+<!--Location button-->
 <form id="locator">
 <input type = "button"
        id="location"
        value="Click Here to Find Your Latitude & Longitude (Your Browser Will Need Location Permission)"/>
 </form>
 
+<!--Line Break-->
 <hr>
 
+<!--Latitude and Longitude Input + Search Button-->
 <form id="searchBar">
-
 <input type="text"
         placeholder = "latitude"
         id="latitude"
         style="width: 20%"
         value="" />
-
 <input type="text"
         placeholder = "longitude"
         id="longitude"
         style="width: 20%"
         value="" />
-
 <input type="button"
         id="searchButton"
         value="Search"
         />
-
-    </form>
-
+</form>
 
 
+<!--Results-->
 <ul>
     <li>Time Zone: <h4 id="timezone"></h4></li>
     <li>Sunrise: <h4 id="sunrise"></h4></li>
     <li>Sunset: <h4 id="sunset"></h4></li>
+    <li>Elevation (m): <h4 id="elevation"></h4></li>
 </ul>
 
+<!--Links HTML to Javascript-->
 <script src="script.js"></script>
 </body>
 </html>

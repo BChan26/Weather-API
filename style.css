@@ -1,11 +1,11 @@
-/*Referenced w3schools & classwork's resume lab for gradient, fixed no repeat cover*/
+/* Referenced w3schools & the classwork resume lab for gradient & fixed */
 *{
     background-image: linear-gradient(to top right, #0086d3, #fcffae);
-    background-repeat: no-repeat, repeat;
-    background-size: cover; 
     background-attachment: fixed;
 }
-#searchBar, #locator, #traditional, h1 {
+
+/*Centering*/
+h1, #traditional, #locator, #searchBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
