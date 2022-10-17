@@ -1,15 +1,18 @@
-//https://www.w3schools.com/html/html5_geolocation.asp
-// let locationFinder = document.querySelector(#locationFinder)
-//     locationFinder.addEventListener("click", locationFinder)
+//Geolocation code based on https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude
+const locationFinder = () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+        let calculatedLatAndLong = document.querySelector("#calculatedLatAndLong")
+        calculatedLatAndLong.innerText = `Your latitude is ${position.coords.latitude} and your longitude is ${position.coords.longitude}`
+    })
+}
+let myLocation = document.querySelector("#location");
+myLocation.addEventListener("click", locationFinder)
 
-//     const findLocation () => {
-//         arguments.getCurrentPosition(pullValue)
-//     }
-//     const pullValue () => {
-//         locationFinder.text = `Your latitude is ${coords.latitude} and your longitude is ${coords.longitude}. Yes, you need that negative sign`
-//     }
 
-//Function to show latitude/longitude map
+
+
+
+//Display latitude/longitude map
 //https://www.w3schools.com/jsref/prop_style_display.asp
 const showMap = () => {
     document.querySelector("#map").style.display = `flex`
@@ -27,6 +30,7 @@ const hideMap = () => {
 //Hide map button (which has to come after function)
 let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
 toggleMapSwitch.addEventListener("click", hideMap)
+
 
 
 

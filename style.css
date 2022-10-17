@@ -1,17 +1,17 @@
-/* Referenced w3schools & the classwork resume lab for gradient & fixed */
+/* Referenced Unit1 Resume Lab & https://www.w3schools.com/css/css3_gradients.asp for gradient*/
 *{
     background-image: linear-gradient(to top right, #0086d3, #fcffae);
     background-attachment: fixed;
 }
 
 /*Centering*/
-h1, #map, #toggleMap, #locator, #searchBar {
+h1, #locator, #calculatedLatAndLong, #explanationForMap, #toggleMap, #map, #searchBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-/*toggle for map display*/
+/*Referenced https://www.w3schools.com/jsref/prop_style_display.asp for display settings*/
 #map{
     display: none
 }

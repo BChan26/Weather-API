@@ -5,7 +5,7 @@
 <head>
     <!--Links HTML to CSS-->
     <link rel = "stylesheet" href="style.css">
-    <!--Info on Tab-->
+    <!--Info on Web Tab-->
     <title>Weather Forecast</title>
     <link rel="icon" href="Assets/icon.webp">
 </head>
@@ -13,9 +13,23 @@
 <body>
 
 <!--Title-->
-<h1>Your Weather Forecast</h1>
+<h1>Today's Weather Forecast</h1>
 
-<!--Button to Display Map-->
+<!--Location button-->
+<form id="locator">
+    <input type = "button"
+           id="location"
+           value="Click to Find Your Latitude & Longitude (Browser Will Need Location Permission, Takes ~7 sec)"/>
+    </form>
+
+<!--Text will appear after button is clicked-->
+<p id="calculatedLatAndLong"></p>
+
+<!--Line Break-->
+<hr>
+
+<!--Buttons to Show and Hide Map-->
+<p id="explanationForMap">Without using location data, find them with this map instead:</p>
 <form id="toggleMap">
 <input type = "button"
         id="buttonToggleMap"
@@ -25,7 +39,7 @@
         value="Hide Map">
 </form>
 
-<!--Map-->
+<!--Toggleable Map-->
 <div id="map">
 <img src="Assets/Transparent Map.png"/>
 </div>
@@ -33,25 +47,15 @@
 <!--Line Break-->
 <hr>
 
-<!--Location button-->
-<form id="locator">
-<input type = "button"
-       id="location"
-       value="Click Here to Find Your Latitude & Longitude (Your Browser Will Need Location Permission)"/>
-</form>
-
-<!--Line Break-->
-<hr>
-
 <!--Latitude and Longitude Input + Search Button-->
 <form id="searchBar">
 <input type="text"
-        placeholder = "Type Your Latitude Here"
+        placeholder = "Latitude"
         id="latitude"
         style="width: 20%"
         value="" />
 <input type="text"
-        placeholder = "Type Your Longitude Here"
+        placeholder = "Longitude"
         id="longitude"
         style="width: 20%"
         value="" />
