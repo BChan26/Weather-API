@@ -23,12 +23,39 @@
 - If you change the latitude and longitude, then run it again, new values appear in the table
 
 ### If time allowed, other extensions I was exploring: 
-- Editing Sunrise/Sunset text to only give time, not the date
 - Have the geolocation automatically fill the input boxes
 - Upon hitting the "enter" on the keyboard (instead of clicking the button), the "search" would run
 - Hourly Forecast
 - Graphing Data (Visual)
 - A toggle button for different units
+
+### What I've Learned/Reinforced
+- HTML: 
+    - How to link the HTML file to the CSS/JS files
+    - How to add images to my HTML file with relative links
+    - The different HTML elements that we can use (divs, forms, input types of text vs button, lists, line breaks, tables)
+    - The different ID's or classes we can assign to various HTML elements
+- CSS: 
+    - Using flexbox to style/organize my HTML elements
+    - Customizing colors and table elements (like borders)
+    - How to apply a gradient background to the entire page
+    - How to use the "display" style with a value of 'none' and 'flex' to show/hide my map
+- Javascript: 
+    - How to utilize navigator.geolocation property & getCurrentPosition() method to find the latitude/longitude
+    - How to utilize document.querySelector to connect our HTML and Javascript files (DOM)
+    - How an event listener connected to a function needs to come after the function it's referencing
+    - How to connect my Javascript file to an API (Application Programming Index)
+    - How to write/structure a function to call the API
+        - async function getData (search) {
+            - search.preventDefault()
+            - fetch()
+            - .then (res => {return res.json()})
+            - .then(res => {your function and what you want to do with the API data}
+            - .catch(err => {console.log(`Error!`, err)})
+        }
+- General: 
+    - The importance of planning ahead and starting early, so glaring errors (like keys not working) can be addressed
+    - Working together with classmates and brainstorming/troubleshooting
 
 ### Credits:  
 - [Open-Meteo Weather API](https://open-meteo.com/en/docs "Open-Meteo Weather API")
@@ -44,6 +71,7 @@
     - [MDN Mozilla - Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude "MDN Geolocation")
     - [MDN Mozilla - navigator.geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation "MDN navigator.geolocation")
     - [Youtube - Creating HTML Table (connected to an array) with Javascript](https://www.youtube.com/watch?v=XmdOZ5NSqb8 "Youtube Tutorial: JSON Array to HTML Table with Javascript")
+    - [W3Schools - String Slice](https://www.w3schools.com/js/js_string_methods.asp"W3Schools "String Slice")
 
 - People Who Supported Me
     - SEI Instructional Team (Jeremy/Tiffany/Brittany) for guidance, suggestions, and problem solving
