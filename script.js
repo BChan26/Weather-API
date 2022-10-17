@@ -1,4 +1,6 @@
-//Geolocation based on https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude and https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation
+///////////////////////Geolocation//////////////////////////
+//https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude
+//https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation
 
 //function uses navigator.geolocation to access location data, with the method "getCurrentPosition"
 const locationFinder = () => {
@@ -40,21 +42,16 @@ toggleMapSwitch.addEventListener("click", hideMap)
 
 ////////////////////////API Call for Weather Data//////////////////////////
 
-//creates variable, connecting HTML's searchButton ID to Javascript
+//creates variables, connecting HTML's ID to Javascript
 let searchButton = document.querySelector("#searchButton")
+let textLatitude = document.querySelector("#latitude")
+let textLongitude = document.querySelector("#longitude")
 
 //function to connect to API and display relevant data
-async function getData (search) {
-    
-    //needed, as mentioned in the mini-lesson
-    search.preventDefault()
-
-    //connects HTML's text input box to Javscript
-    let textLatitude = document.querySelector("#latitude").value
-    let textLongitude = document.querySelector("#longitude").value
+async function getData () {
     
     //Fetches - Includes temp, sunrise, sunset, rain, snow (in F, Inches, Auto-Time Zone)
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${textLatitude}&longitude=${textLongitude}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,snowfall_sum,windspeed_10m_max,winddirection_10m_dominant&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto`)
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${textLatitude.value}&longitude=${textLongitude.value}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,snowfall_sum,windspeed_10m_max,winddirection_10m_dominant&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto`)
 
     //needed, as mentioned in the mini-lesson
     .then (res => {
@@ -110,3 +107,22 @@ async function getData (search) {
 
 //search button, upon click runs the getData function for results, comes after
 searchButton.addEventListener("click", getData)
+
+//////////////Event Listener for Enter Button/////////////
+//https://www.w3schools.com/HOWTO/howto_js_trigger_button_enter.asp
+
+//event listener for hitting the enter button, associated with the longitude box
+textLongitude.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        getData()
+    }
+})
+
+//event listener for hitting the enter button, associated with the latitude box
+textLatitude.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        getData()
+    }
+})

@@ -21,10 +21,10 @@
     - Max Wind (mph)
     - Wind Direction (°)
 - If you change the latitude and longitude, then run it again, new values appear in the table
+- Upon hitting the "enter" on the keyboard (instead of clicking the button), the "search" would run
 
 ### If time allowed, other extensions I was exploring: 
 - Have the geolocation automatically fill the input boxes
-- Upon hitting the "enter" on the keyboard (instead of clicking the button), the "search" would run
 - Hourly Forecast
 - Graphing Data (Visual)
 - A toggle button for different units
@@ -72,6 +72,7 @@
     - [MDN Mozilla - navigator.geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation "MDN navigator.geolocation")
     - [Youtube - Creating HTML Table (connected to an array) with Javascript](https://www.youtube.com/watch?v=XmdOZ5NSqb8 "Youtube Tutorial: JSON Array to HTML Table with Javascript")
     - [W3Schools - String Slice](https://www.w3schools.com/js/js_string_methods.asp"W3Schools "String Slice")
+    - [W3Schools - "Enter" Button Event Listener](https://www.w3schools.com/HOWTO/howto_js_trigger_button_enter.asp "Trigger a Button Click on Enter")
 
 - People Who Supported Me
     - SEI Instructional Team (Jeremy/Tiffany/Brittany) for guidance, suggestions, and problem solving
