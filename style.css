@@ -5,8 +5,13 @@
 }
 
 /*Centering*/
-h1, #traditional, #locator, #searchBar {
+h1, #map, #toggleMap, #locator, #searchBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
-} 
+}
+
+/*toggle for map display*/
+#map{
+    display: none
+}

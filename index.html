@@ -15,8 +15,18 @@
 <!--Title-->
 <h1>Your Weather Forecast</h1>
 
+<!--Button to Display Map-->
+<form id="toggleMap">
+<input type = "button"
+        id="buttonToggleMap"
+        value="Show Map">
+<input type = "button"
+        id="toggleMapSwitch"
+        value="Hide Map">
+</form>
+
 <!--Map-->
-<div id="traditional">
+<div id="map">
 <img src="Assets/Transparent Map.png"/>
 </div>
 
@@ -36,12 +46,12 @@
 <!--Latitude and Longitude Input + Search Button-->
 <form id="searchBar">
 <input type="text"
-        placeholder = "latitude"
+        placeholder = "Type Your Latitude Here"
         id="latitude"
         style="width: 20%"
         value="" />
 <input type="text"
-        placeholder = "longitude"
+        placeholder = "Type Your Longitude Here"
         id="longitude"
         style="width: 20%"
         value="" />

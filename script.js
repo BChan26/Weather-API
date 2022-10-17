@@ -9,6 +9,28 @@
 //         locationFinder.text = `Your latitude is ${coords.latitude} and your longitude is ${coords.longitude}. Yes, you need that negative sign`
 //     }
 
+//Function to show latitude/longitude map
+//https://www.w3schools.com/jsref/prop_style_display.asp
+const showMap = () => {
+    document.querySelector("#map").style.display = `flex`
+    }
+
+//Show map button (which has to come after function)
+let buttonToggleMap = document.querySelector("#buttonToggleMap")
+buttonToggleMap.addEventListener("click", showMap)
+
+//Function to hide latitude/longitude map
+const hideMap = () => {
+    document.querySelector("#map").style.display = `none`
+    }
+
+//Hide map button (which has to come after function)
+let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
+toggleMapSwitch.addEventListener("click", hideMap)
+
+
+
+
 
 //creates variable, connecting HTML's searchButton ID to Javascript
 let searchButton = document.querySelector("#searchButton")
