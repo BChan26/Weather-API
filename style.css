@@ -5,8 +5,7 @@
     background-size: cover; 
     background-attachment: fixed;
 }
-
-#searchBar, h1, img {
+#searchBar, #locator, #traditional, h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
