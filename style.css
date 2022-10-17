@@ -17,5 +17,5 @@ h1, #locator, #calculatedLatAndLong, #explanationForMap, #toggleMap, #map, #sear
 }
 
 /*Referenced tic-tac-toe homework, to get a border for the table and cells*/
-table, tr, td {
+table, tr, th, td {
     border: 1px solid rgb(65, 87, 75);}

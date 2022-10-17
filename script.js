@@ -109,14 +109,21 @@ async function getData (search) {
         let snowfall = document.querySelector("#snowfall")
         snowfall.innerText = res.daily.snowfall_sum[0]
 
+        //7 day forecast data table
         const addCellValues = () => {
             let dataTable = document.querySelector("#cellAll")
             
             for (let i=0; i < res.daily.time.length; i ++) {
-                let row1 = `<tr>
+                let rows = `<tr>
                             <td>${res.daily.time[i]}</td>
+                            <td>${res.daily.temperature_2m_max[i]}</td>
+                            <td>${res.daily.temperature_2m_min[i]}</td>
+                            <td>${res.daily.sunrise[i]}</td>
+                            <td>${res.daily.sunset[i]}</td>
+                            <td>${res.daily.precipitation_sum[i]}</td>
+                            <td>${res.daily.snowfall_sum[i]}</td>
                             </tr>`
-                dataTable.innerHTML += row1
+                dataTable.innerHTML += rows
                 console.log(dataTable.innerHTML)
             }
             }
