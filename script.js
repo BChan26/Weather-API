@@ -29,11 +29,6 @@ const hideMap = () => {
 let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
 toggleMapSwitch.addEventListener("click", hideMap)
 
-
-
-
-
-
 //creates variable, connecting HTML's searchButton ID to Javascript
 let searchButton = document.querySelector("#searchButton")
 
@@ -64,50 +59,15 @@ async function getData (search) {
         //console log to get full API call
         console.log(res)
 
-        //Date
-        console.log(`Date: `, res.daily.time[0])
-        let time = document.querySelector("#time")
-        time.innerText = res.daily.time[0]
-
         //Time Zone
         console.log(`Time Zone: `, res.timezone)
         let timeZone = document.querySelector("#timezone")
         timeZone.innerText = res.timezone
-
-        //Temp High (F)
-        console.log(`High Temp(°F): `, res.daily.temperature_2m_max[0])
-        let high = document.querySelector("#high")
-        high.innerText = res.daily.temperature_2m_max[0]
-
-        //Temp Low (F)
-        console.log(`Low Temp(°F): `, res.daily.temperature_2m_min[0])
-        let low = document.querySelector("#low")
-        low.innerText = res.daily.temperature_2m_min[0]
-
-        //Sunrise
-        console.log(`Sunrise: `, res.daily.sunrise[0])
-        let sunrise = document.querySelector("#sunrise")
-        sunrise.innerText = res.daily.sunrise[0]
-
-        //Sunset
-        console.log(`Sunset: `, res.daily.sunset[0])
-        let sunset = document.querySelector("#sunset")
-        sunset.innerText = res.daily.sunset[0]
         
         //Elevation in meters
         console.log(`Elevation (m): `, res.elevation)
         let elevation = document.querySelector("#elevation")
         elevation.innerText = res.elevation
-
-        //Precipitation in inches
-        console.log(`Precipitation (in): `, res.daily.precipitation_sum[0])
-        let precipitation = document.querySelector("#precipitation")
-        precipitation.innerText = res.daily.precipitation_sum[0]
-
-        //Snowfall in centimeters
-        console.log(`Snowfall (cm): `, res.daily.snowfall_sum[0])
-        let snowfall = document.querySelector("#snowfall")
-        snowfall.innerText = res.daily.snowfall_sum[0]
 
         //7 day forecast data table
         const addCellValues = () => {
