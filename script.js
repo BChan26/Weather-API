@@ -1,12 +1,19 @@
+//Global Variable for API Call
+//created variables, connecting HTML's ID to Javascript
+let searchButton = document.querySelector("#searchButton")
+let textLatitude = document.querySelector("#latitude")
+let textLongitude = document.querySelector("#longitude")
+
 ///////////////////////Geolocation//////////////////////////
 //https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude
 //https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation
-
 //function uses navigator.geolocation to access location data, with the method "getCurrentPosition"
 const locationFinder = () => {
     navigator.geolocation.getCurrentPosition((position) => {
         let calculatedLatAndLong = document.querySelector("#calculatedLatAndLong")
         calculatedLatAndLong.innerText = `Your latitude is ${position.coords.latitude} and your longitude is ${position.coords.longitude}`
+        textLatitude.value = position.coords.latitude
+        textLongitude.value = position.coords.longitude
     })
 }
 //variable to connect button to Javascript code, with a click event listener to execute the function abov
@@ -41,11 +48,6 @@ toggleMapSwitch.addEventListener("click", hideMap)
 
 
 ////////////////////////API Call for Weather Data//////////////////////////
-
-//creates variables, connecting HTML's ID to Javascript
-let searchButton = document.querySelector("#searchButton")
-let textLatitude = document.querySelector("#latitude")
-let textLongitude = document.querySelector("#longitude")
 
 //function to connect to API and display relevant data
 async function getData () {
