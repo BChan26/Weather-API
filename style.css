@@ -5,7 +5,7 @@
 }
 
 /*Centering using flex box*/
-h1, #locator, #calculatedLatAndLong, #explanationForMap, #toggleMap, #map, #searchBar {
+h1, #locator, #calculatedLatAndLong, #explanationForMap, #toggleMap, #map, #searchBar{
     display: flex;
     flex-direction: row;
     justify-content: center;

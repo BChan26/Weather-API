@@ -7,13 +7,13 @@
     <link rel = "stylesheet" href="style.css">
     <!--Info on Web Tab-->
     <title>Weather Forecast</title>
-    <link rel="icon" href="Assets/icon.webp">
+    <link rel="icon" href="Assets/browser icon.webp">
 </head>
 
 <body>
 
 <!--Title-->
-<h1>Today's Weather Forecast</h1>
+<h1>7 Day Weather Forecast</h1>
 
 <!--Location button-->
 <form id="locator">
@@ -73,7 +73,7 @@
 </ul>
 
 <!--7 Day Forecast-->
-<table>
+<table id="sevenDay">
         <thead>
                 <tr>
                         <th>Date (Y/M/D)</th>
@@ -83,8 +83,22 @@
                         <th>Sunset</th>
                         <th>Rain (in)</th>
                         <th>Snowfall (cm)</th>
+                        <th>Max Wind (mph)</th>
+                        <th>Wind Direction (°)</th>
+                </tr>
+                <tr>
+                        <th><img src="Assets/icons8-calendar-64.png"></th>
+                        <th><img src="Assets/icons8-high-temperature-64.png"></th>
+                        <th><img src="Assets/icons8-low-temperature-64.png"></th>
+                        <th><img src="Assets/icons8-sunrise-64.png"></th>
+                        <th><img src="Assets/icons8-sunset-64.png"></th>
+                        <th><img src="Assets/icons8-rain-64.png"></th>
+                        <th><img src="Assets/icons8-snow-64.png"></th>
+                        <th><img src="Assets/icons8-windsock-64.png"></th>
+                        <th><img src="Assets/Transparent Wind Directions.png" width="150px" height="150px"></th>
                 </tr>
         </thead>
+        
 
         <tbody id="cellAll">
         </tbody>

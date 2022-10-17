@@ -46,7 +46,7 @@ async function getData (search) {
     //${textLongitude}
     
     //Fetches - Includes temp, sunrise, sunset, rain, snow (in F, Inches, Auto-Time Zone)
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${textLatitude}&longitude=${textLongitude}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,snowfall_sum&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=auto`)
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${textLatitude}&longitude=${textLongitude}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,snowfall_sum,windspeed_10m_max,winddirection_10m_dominant&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto`)
 
     //needed, as mentioned in the mini-lesson
     .then (res => {
@@ -69,10 +69,10 @@ async function getData (search) {
         let elevation = document.querySelector("#elevation")
         elevation.innerText = res.elevation
 
-        //7 day forecast data table
+        //7 day forecast data table, referencing https://www.youtube.com/watch?v=XmdOZ5NSqb8 to create a new row each time and using .innerHTML to recognize row/cells being added, instead of just innertext
         const addCellValues = () => {
             let dataTable = document.querySelector("#cellAll")
-            
+            dataTable.innerHTML = ``
             for (let i=0; i < res.daily.time.length; i ++) {
                 let rows = `<tr>
                             <td>${res.daily.time[i]}</td>
@@ -80,8 +80,10 @@ async function getData (search) {
                             <td>${res.daily.temperature_2m_min[i]}</td>
                             <td>${res.daily.sunrise[i]}</td>
                             <td>${res.daily.sunset[i]}</td>
-                            <td>${res.daily.precipitation_sum[i]}</td>
+                            <td>${res.daily.rain_sum[i]}</td>
                             <td>${res.daily.snowfall_sum[i]}</td>
+                            <td>${res.daily.windspeed_10m_max[i]}</td>
+                            <td>${res.daily.winddirection_10m_dominant[i]}</td>
                             </tr>`
                 dataTable.innerHTML += rows
                 console.log(dataTable.innerHTML)
