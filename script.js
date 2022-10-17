@@ -78,17 +78,18 @@ async function getData (search) {
         elevation.innerText = res.elevation
 
         //7 day forecast data table, referencing https://www.youtube.com/watch?v=XmdOZ5NSqb8 to create a new row each time and using .innerHTML to recognize row/cells being added, instead of just innertext
+        //https://www.w3schools.com/js/js_string_methods.asp for slice to clean up text for date/sunrise/sunset
         const addCellValues = () => {
             let dataTable = document.querySelector("#cellAll")
             dataTable.innerHTML = ``
 
             for (let i=0; i < res.daily.time.length; i ++) {
                 let rows = `<tr>
-                            <td>${res.daily.time[i]}</td>
+                            <td>${res.daily.time[i].slice(5)}</td>
                             <td>${res.daily.temperature_2m_max[i]}</td>
                             <td>${res.daily.temperature_2m_min[i]}</td>
-                            <td>${res.daily.sunrise[i]}</td>
-                            <td>${res.daily.sunset[i]}</td>
+                            <td>${res.daily.sunrise[i].slice(11)}</td>
+                            <td>${res.daily.sunset[i].slice(11)}</td>
                             <td>${res.daily.rain_sum[i]}</td>
                             <td>${res.daily.snowfall_sum[i]}</td>
                             <td>${res.daily.windspeed_10m_max[i]}</td>
