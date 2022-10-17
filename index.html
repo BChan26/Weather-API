@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Links HTML to CSS-->
-    <link rel = "stylesheet" href="style.css">
-    <!--Info on Web Tab-->
-    <title>Weather Forecast</title>
-    <link rel="icon" href="Assets/browser icon.webp">
+        <!--Links HTML to CSS-->
+        <link rel = "stylesheet" href="style.css">
+        <!--Info on Web Tab-->
+        <title>Weather Forecast</title>
+        <link rel="icon" href="Assets/browser icon.webp">
 </head>
 
 <body>
@@ -15,33 +15,43 @@
 <!--Title-->
 <h1>7 Day Weather Forecast</h1>
 
-<!--Location button-->
-<form id="locator">
-    <input type = "button"
-           id="location"
-           value="Click to Find Your Latitude & Longitude (Browser Will Need Location Permission, Takes ~7 sec)"/>
-    </form>
+<!--Div box3 for all location finding & flex, with box1=geolocation and box2=map-->
+<div id="box3">
 
-<!--Text will appear after button is clicked-->
-<p id="calculatedLatAndLong"></p>
+        <div id="box1">
+                <!--Button to find latitude and longitude-->
+                <form id="locator">
+                        <input type = "button"
+                                id="location"
+                                value="Click to Find Your Latitude & Longitude"/>
+                </form>
 
-<!--Line Break-->
-<hr>
+                <!--Explanation about required permissions-->
+                <p id="geolocation">Browser Will Need Location Permission, Takes ~7 seconds:</p>
 
-<!--Buttons to Show and Hide Map-->
-<p id="explanationForMap">Without using location data, find them with this map:</p>
-<form id="toggleMap">
-<input type = "button"
-        id="buttonToggleMap"
-        value="Show Map">
-<input type = "button"
-        id="toggleMapSwitch"
-        value="Hide Map">
-</form>
+                <!--Text will appear after button is clicked-->
+                <p id="calculatedLatAndLong"></p>
+        </div>
 
-<!--Toggleable Map-->
-<div id="map">
-<img src="Assets/Transparent Map.png"/>
+        <div id="box2">
+                <!--Buttons to Show and Hide Map-->
+                <form id="toggleMap">
+                        <input type = "button"
+                                id="buttonToggleMap"
+                                value="Show Map">
+                        <input type = "button"
+                                id="toggleMapSwitch"
+                                value="Hide Map">
+                </form>
+
+                <!--Explanation about old school latitude/longitude calculation-->
+                <p id="explanationForMap">Without using location data, find them with this map:</p>
+
+                <!--Toggleable Map-->
+                <div id="map">
+                <img src="Assets/Transparent Map.png"/>
+                </div>
+        </div>
 </div>
 
 <!--Line Break-->
@@ -65,14 +75,13 @@
         />
 </form>
 
-
 <!--Results: Time Zone and Elevation (unchanging)-->
 <ul>
     <li>Time Zone: <h4 id="timezone"></h4></li>
     <li>Elevation (m): <h4 id="elevation"></h4></li>
 </ul>
 
-<!--7 Day Forecast-->
+<!--7 Day Forecast, with icons sourced from icons8.com-->
 <table id="sevenDay">
         <thead>
                 <tr>
@@ -99,7 +108,6 @@
                 </tr>
         </thead>
         
-
         <tbody id="cellAll">
         </tbody>
 </table>
