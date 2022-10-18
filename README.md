@@ -6,34 +6,29 @@
 - I have created a weather app that tells you the 7 day forecast based on your latitude and longitude.
 
 ### Features:
-- 2 methods for finding your latitude and longitude (either with/without accessing your location data)
-- Input boxes for latitude and longitude (which autofill if you allow location permission)
+- 2 methods for finding your latitude and longitude (If you allow location access, it autofills them)
+- Weather with either Imperial (U.S.A) Units or Metric Units
 - Your Basic Information
     - Time Zone
-    - Elevation (m)
+    - Today's Forecast
 - Hourly Forecast
     - Time
-    - Temp (°F)
-    - Cloud Cover (%)
-    - Humidity (%)
-    - Rain (in)
-    - Snowfall (cm)
-    - Wind Speed (mph)
+    - Temp
+    - Cloud Cover
+    - Humidity
+    - Rain
+    - Snowfall
+    - Wind Speed
 - 7 Day Forecast
-    - High Temp (°F)
-    - Low Temp (°F)
+    - High Temp
+    - Low Temp
     - Sunrise
     - Sunset 
-    - Rain (in)
-    - Snowfall (cm)
-    - Max Wind (mph)
-    - Wind Direction (°)
+    - Rain
+    - Snowfall
+    - Max Wind
+    - Wind Direction
 - If you change the latitude and longitude, then run it again, new values appear in the table
-- Upon hitting the "enter" on the keyboard (instead of clicking the button), the "search" would run
-
-### If time allowed, other extensions I was exploring: 
-- Graphing Data (Visual)
-- A toggle button for different units
 
 ### What I've Learned/Reinforced
 - HTML: 
@@ -45,7 +40,7 @@
     - Using flexbox to style/organize my HTML elements
     - Customizing colors and table elements (like borders)
     - How to apply a gradient background to the entire page
-    - How to use the "display" style with a value of 'none' and 'flex' to show/hide my map
+    - How to use the "display" style with a value of 'none' and 'flex' and 'block' to show/hide my HTML elements
 - Javascript: 
     - How to utilize navigator.geolocation property & getCurrentPosition() method to find the latitude/longitude
     - How to utilize document.querySelector to connect our HTML and Javascript files (DOM)
@@ -59,6 +54,7 @@
             - .then(res => {your function and what you want to do with the API data}
             - .catch(err => {console.log(`Error!`, err)})
         }
+    - Scope, via trying to create a unit converter on API data ouput within/from an async function
 - General: 
     - The importance of planning ahead and starting early, so glaring errors (like keys not working) can be addressed
     - Working together with classmates and brainstorming/troubleshooting
