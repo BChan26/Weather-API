@@ -11,7 +11,8 @@ let textLongitude = document.querySelector("#longitude")
 const locationFinder = () => {
     navigator.geolocation.getCurrentPosition((position) => {
         let calculatedLatAndLong = document.querySelector("#calculatedLatAndLong")
-        calculatedLatAndLong.innerText = `Your latitude is ${position.coords.latitude} and your longitude is ${position.coords.longitude}`
+        calculatedLatAndLong.innerText = `Your latitude is ${position.coords.latitude} & longitude is ${position.coords.longitude}.`
+        //The following 2 lines change the value inside of the lat/long input boxes
         textLatitude.value = position.coords.latitude
         textLongitude.value = position.coords.longitude
     })
@@ -53,7 +54,7 @@ toggleMapSwitch.addEventListener("click", hideMap)
 async function getData () {
     
     //Fetches - Includes temp, sunrise, sunset, rain, snow (in F, Inches, Auto-Time Zone)
-    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${textLatitude.value}&longitude=${textLongitude.value}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,snowfall_sum,windspeed_10m_max,winddirection_10m_dominant&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto`)
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${textLatitude.value}&longitude=${textLongitude.value}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,cloudcover_low,windspeed_10m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,snowfall_sum,windspeed_10m_max,winddirection_10m_dominant&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto`)
 
     //needed, as mentioned in the mini-lesson
     .then (res => {
@@ -97,6 +98,23 @@ async function getData () {
                 dataTable.innerHTML += rows
             }
             console.log(dataTable.innerHTML)
+
+            let hourlyTable = document.querySelector("#hourlyAll")
+            hourlyTable.innerHTML = ``
+
+            for (let j=0; j < 25; j++) {
+                let hourlyRows=`<tr>
+                                <td>${res.hourly.time[j].slice(11)}</td>
+                                <td>${res.hourly.temperature_2m[j]}</td>
+                                <td>${res.hourly.cloudcover_low[j]}</td>
+                                <td>${res.hourly.relativehumidity_2m[j]}</td>
+                                <td>${res.hourly.rain[j]}</td>
+                                <td>${res.hourly.snowfall[j]}</td>
+                                <td>${res.hourly.windspeed_10m[j]}</td>
+                                </tr>`
+                hourlyTable.innerHTML += hourlyRows
+            }
+            console.log(hourlyTable.innerHTML)
             }
         addCellValues()
     })

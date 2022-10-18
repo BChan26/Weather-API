@@ -13,7 +13,7 @@
 <body>
 
 <!--Title-->
-<h1>7 Day Weather Forecast</h1>
+<h1>Weather Forecast</h1>
 
 <!--Div box3 for all location finding & flex, with box1=geolocation and box2=map-->
 <div id="box3">
@@ -81,8 +81,39 @@
     <li>Elevation (m): <h4 id="elevation"></h4></li>
 </ul>
 
+
+<!--Hourly Forecast, with icons sourced from icons8.com-->
+<h2>Today's Hourly Forecast</h2>
+<table>
+        <thead>
+                <tr>
+                        <th>Time </th>
+                        <th>Temperature (°F)</th>
+                        <th>Low Cloud Cover (%)</th>
+                        <th>Humidity (%)</th>
+                        <th>Rain (in)</th>
+                        <th>Snowfall (cm)</th>
+                        <th>Wind Speed (mph)</th>
+                </tr>
+                <tr>
+                        <th><img src="Assets/icons8-hour-64.png"></th>
+                        <th><img src="Assets/icons8-temperature-64.png"></th>
+                        <th><img src="Assets/icons8-clouds-64.png"></th>
+                        <th><img src="Assets/icons8-humidity-64.png"></th>
+                        <th><img src="Assets/icons8-rain-64.png"></th>
+                        <th><img src="Assets/icons8-snow-64.png"></th>
+                        <th><img src="Assets/icons8-windsock-64.png"></th>
+                </tr>
+        </thead>
+        
+        <tbody id="hourlyAll">
+        </tbody>
+</table>
+
+
 <!--7 Day Forecast, with icons sourced from icons8.com-->
-<table id="sevenDay">
+<h2>7 Day Forecast</h2>
+<table>
         <thead>
                 <tr>
                         <th>Date</th>
