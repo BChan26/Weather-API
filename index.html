@@ -84,7 +84,17 @@
 
 <!--Hourly Forecast, with icons sourced from icons8.com-->
 <h2>Today's Hourly Forecast</h2>
-<table>
+
+<form id="hourlyShowHide">
+        <input type = "button"
+                id="hourlyShow"
+                value="Show Hourly Forecast">
+        <input type = "button"
+                id="hourlyHide"
+                value="Hide Hourly Forecast">
+</form>
+
+<table id="hourly">
         <thead>
                 <tr>
                         <th>Time </th>
@@ -113,7 +123,17 @@
 
 <!--7 Day Forecast, with icons sourced from icons8.com-->
 <h2>7 Day Forecast</h2>
-<table>
+
+<form id="sevenShowHide">
+        <input type = "button"
+                id="sevenShow"
+                value="Show 7-Day Forecast">
+        <input type = "button"
+                id="sevenHide"
+                value="Hide 7-Day Forecast">
+</form>
+
+<table id="sevenDay">
         <thead>
                 <tr>
                         <th>Date</th>

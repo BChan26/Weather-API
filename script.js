@@ -4,7 +4,10 @@ let searchButton = document.querySelector("#searchButton")
 let textLatitude = document.querySelector("#latitude")
 let textLongitude = document.querySelector("#longitude")
 
+
+
 ///////////////////////Geolocation//////////////////////////
+
 //https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude
 //https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation
 //function uses navigator.geolocation to access location data, with the method "getCurrentPosition"
@@ -23,9 +26,7 @@ myLocation.addEventListener("click", locationFinder)
 
 
 
-
 ////////////////////////Toggling Map//////////////////////////
-
 //Function to show latitude/longitude map
 //https://www.w3schools.com/jsref/prop_style_display.asp
 const showMap = () => {
@@ -45,6 +46,45 @@ const hideMap = () => {
 let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
 toggleMapSwitch.addEventListener("click", hideMap)
 
+
+
+///////////////////Toggling Hourly Table////////////////////////
+const showHourly = () => {
+    document.querySelector("#hourly").style.display = `block`
+}
+
+//Show map button (which has to come after function)
+let hourlyToggleShow = document.querySelector("#hourlyShow")
+hourlyToggleShow.addEventListener("click", showHourly)
+
+//Function to hide latitude/longitude map
+const hideHourly = () => {
+    document.querySelector("#hourly").style.display = `none`
+}
+
+//Hide map button (which has to come after function)
+let hourlyToggleHide = document.querySelector("#hourlyHide")
+hourlyToggleHide.addEventListener("click", hideHourly)
+
+
+
+//////////////////Toggling 7-Day Table/////////////////////////
+const showSevenDay = () => {
+    document.querySelector("#sevenDay").style.display = `block`
+}
+
+//Show map button (which has to come after function)
+let sevenToggleShow = document.querySelector("#sevenShow")
+sevenToggleShow.addEventListener("click", showSevenDay)
+
+//Function to hide latitude/longitude map
+const hideSevenDay = () => {
+    document.querySelector("#sevenDay").style.display = `none`
+}
+
+//Hide map button (which has to come after function)
+let sevenToggleHide = document.querySelector("#sevenHide")
+sevenToggleHide.addEventListener("click", hideSevenDay)
 
 
 
@@ -80,6 +120,8 @@ async function getData () {
         //7 day forecast data table, referencing https://www.youtube.com/watch?v=XmdOZ5NSqb8 to create a new row each time and using .innerHTML to recognize row/cells being added, instead of just innertext
         //https://www.w3schools.com/js/js_string_methods.asp for slice to clean up text for date/sunrise/sunset
         const addCellValues = () => {
+            
+            //7 Day Forecast Code
             let dataTable = document.querySelector("#cellAll")
             dataTable.innerHTML = ``
 
@@ -99,6 +141,7 @@ async function getData () {
             }
             console.log(dataTable.innerHTML)
 
+            //Hourly Forecast Code
             let hourlyTable = document.querySelector("#hourlyAll")
             hourlyTable.innerHTML = ``
 

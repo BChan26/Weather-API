@@ -15,14 +15,14 @@
     border: 1px solid rgb(65, 87, 75); 
 }
 
-h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMap, #map, #searchBar{
+h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMap, #map, #searchBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 /*Referenced https://www.w3schools.com/jsref/prop_style_display.asp for display settings*/
-#map{
+#map, #hourly, #sevenDay {
     display: none
 }
 

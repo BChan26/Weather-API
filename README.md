@@ -7,10 +7,18 @@
 
 ### Features:
 - 2 methods for finding your latitude and longitude (either with/without accessing your location data)
-- Input boxes for latitude and longitude, to connect to the Weather API
+- Input boxes for latitude and longitude (which autofill if you allow location permission)
 - Your Basic Information
     - Time Zone
     - Elevation (m)
+- Hourly Forecast
+    - Time
+    - Temp (°F)
+    - Cloud Cover (%)
+    - Humidity (%)
+    - Rain (in)
+    - Snowfall (cm)
+    - Wind Speed (mph)
 - 7 Day Forecast
     - High Temp (°F)
     - Low Temp (°F)
@@ -24,8 +32,6 @@
 - Upon hitting the "enter" on the keyboard (instead of clicking the button), the "search" would run
 
 ### If time allowed, other extensions I was exploring: 
-- Have the geolocation automatically fill the input boxes
-- Hourly Forecast
 - Graphing Data (Visual)
 - A toggle button for different units
 
@@ -75,6 +81,6 @@
     - [W3Schools - "Enter" Button Event Listener](https://www.w3schools.com/HOWTO/howto_js_trigger_button_enter.asp "Trigger a Button Click on Enter")
 
 - People Who Supported Me
-    - SEI Instructional Team (Jeremy/Tiffany/Brittany) for guidance, suggestions, and problem solving
+    - SEI Instructional Team (Jeremy/Tiffany/Brittany/Kristina/Tylus) for guidance, suggestions, and problem solving
     - SEI Classmates (Everyone) for brainstorming, sharing ideas, and keeping me company in Zoom breakout rooms
     - A classmate's significant other who helped clarify the units needed for latitude/longitude
