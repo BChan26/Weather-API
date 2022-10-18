@@ -17,7 +17,7 @@
 
 <!--Div box3 for all location finding & flex, with box1=geolocation and box2=map-->
 <div id="box3">
-
+        <!--Div Box1 to align left-->
         <div id="box1">
                 <!--Button to find latitude and longitude-->
                 <form id="locator">
@@ -33,6 +33,7 @@
                 <p id="calculatedLatAndLong"></p>
         </div>
 
+        <!--Div Box2 to align right-->
         <div id="box2">
                 <!--Buttons to Show and Hide Map-->
                 <form id="toggleMap">
@@ -44,7 +45,7 @@
                                 value="Hide Map">
                 </form>
 
-                <!--Explanation about old school latitude/longitude calculation-->
+                <!--Explanation of map-->
                 <p id="explanationForMap">Without using location data, find them with this map:</p>
 
                 <!--Toggleable Map-->
@@ -59,27 +60,32 @@
 
 <!--Latitude and Longitude Input + Search Button-->
 <form id="searchBar">
-<input type="text"
-        placeholder = "Latitude"
-        id="latitude"
-        style="width: 20%"
-        value="" />
-<input type="text"
-        placeholder = "Longitude (Include the - sign)"
-        id="longitude"
-        style="width: 20%"
-        value="" />
-<input type="button"
-        id="searchButton"
-        value="Search"
-        />
+        <input type="text"
+                placeholder = "Latitude"
+                id="latitude"
+                style="width: 10%"
+                value="" />
+        <input type="text"
+                placeholder = "Longitude"
+                id="longitude"
+                style="width: 10%"
+                value="" />
+        <input type="button"
+                id="usaButton"
+                value="Weather with U.S.A units"/>
+        <input type="button"
+                id="metricButton"
+                value="Weather with Metric units"/>
 </form>
 
-<!--Results: Time Zone and Elevation (unchanging)-->
-<ul>
-    <li>Time Zone: <h4 id="timezone"></h4></li>
-    <li>Elevation (m): <h4 id="elevation"></h4></li>
-</ul>
+<!--Line Break-->
+<hr>
+
+<!--Result: Time Zone(unchanging)-->
+        <div id="timezoneText">Time Zone: <div id="timezone"></div></div>
+
+<!--Line Break-->
+<hr>
 
 <!--Today's Forecast Only-->
 <h2>Today's Forecast</h2>
@@ -87,14 +93,14 @@
         <thead>
                 <tr>
                         <th>Date</th>
-                        <th>High Temp (°F)</th>
-                        <th>Low Temp (°F)</th>
+                        <th>High Temp</th>
+                        <th>Low Temp</th>
                         <th>Sunrise</th>
                         <th>Sunset</th>
-                        <th>Rain (in)</th>
-                        <th>Snowfall (cm)</th>
-                        <th>Max Wind (mph)</th>
-                        <th>Wind Direction (°)</th>
+                        <th>Rain</th>
+                        <th>Snowfall</th>
+                        <th>Max Wind</th>
+                        <th>Wind Direction</th>
                 </tr>
                 <tr>
                         <th><img src="Assets/icons8-calendar-64.png"></th>
@@ -113,9 +119,13 @@
         </tbody>
 </table>
 
+<!--Line Break-->
+<hr>
+
 <!--Hourly Forecast, with icons sourced from icons8.com-->
 <h2>Today's Hourly Forecast</h2>
 
+<!--Buttons to Show/Hide Hourly Forecast-->
 <form id="hourlyShowHide">
         <input type = "button"
                 id="hourlyShow"
@@ -125,16 +135,17 @@
                 value="Hide Hourly Forecast">
 </form>
 
+<!--Hourly Forecast Table-->
 <table id="hourly">
         <thead>
                 <tr>
                         <th>Time </th>
-                        <th>Temperature (°F)</th>
-                        <th>Low Cloud Cover (%)</th>
-                        <th>Humidity (%)</th>
-                        <th>Rain (in)</th>
-                        <th>Snowfall (cm)</th>
-                        <th>Wind Speed (mph)</th>
+                        <th>Temperature</th>
+                        <th>Low Cloud Cover</th>
+                        <th>Humidity</th>
+                        <th>Rain</th>
+                        <th>Snowfall</th>
+                        <th>Wind Speed</th>
                 </tr>
                 <tr>
                         <th><img src="Assets/icons8-hour-64.png"></th>
@@ -151,10 +162,14 @@
         </tbody>
 </table>
 
+<!--Line Break-->
+<hr>
+
 
 <!--7 Day Forecast, with icons sourced from icons8.com-->
 <h2>7 Day Forecast</h2>
 
+<!--Buttons to Show/Hide 7 Day Forecast-->
 <form id="sevenShowHide">
         <input type = "button"
                 id="sevenShow"
@@ -164,18 +179,19 @@
                 value="Hide 7-Day Forecast">
 </form>
 
+<!--7 Day Forecast Table-->
 <table id="sevenDay">
         <thead>
                 <tr>
                         <th>Date</th>
-                        <th>High Temp (°F)</th>
-                        <th>Low Temp (°F)</th>
+                        <th>High Temp</th>
+                        <th>Low Temp</th>
                         <th>Sunrise</th>
                         <th>Sunset</th>
-                        <th>Rain (in)</th>
-                        <th>Snowfall (cm)</th>
-                        <th>Max Wind (mph)</th>
-                        <th>Wind Direction (°)</th>
+                        <th>Rain</th>
+                        <th>Snowfall</th>
+                        <th>Max Wind</th>
+                        <th>Wind Direction</th>
                 </tr>
                 <tr>
                         <th><img src="Assets/icons8-calendar-64.png"></th>

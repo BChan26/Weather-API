@@ -1,27 +1,23 @@
-/* Referenced Unit1 Resume Lab & https://www.w3schools.com/css/css3_gradients.asp for gradient  */
+/*Gradient Resource: https://www.w3schools.com/css/css3_gradients.asp*/
 *{
     background-image: linear-gradient(to top right, #0086d3, #fcffae);
     background-attachment: fixed;
 }
 
-/*Referenced classroom resource for flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/  */
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 #box3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#box1, #box2 {
-    border: 1px solid rgb(65, 87, 75); 
-}
-
-h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMap, #map, #searchBar {
+h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMap, #map, #searchBar, #timezoneText {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-/*Referenced https://www.w3schools.com/jsref/prop_style_display.asp for display settings*/
+/*https://www.w3schools.com/jsref/prop_style_display.asp*/
 #map, #hourly, #sevenDay {
     display: none
 }
@@ -30,4 +26,8 @@ h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMa
 tr, th, td {
     border: 1px solid rgb(65, 87, 75);
     text-align:center;
+}
+
+#box1, #box2 {
+    border: 1px solid rgb(65, 87, 75); 
 }
