@@ -121,6 +121,47 @@ async function getData () {
         //https://www.w3schools.com/js/js_string_methods.asp for slice to clean up text for date/sunrise/sunset
         const addCellValues = () => {
             
+            //Just Today's Forecast
+            let justTodayTable = document.querySelector("#todayOnly")
+            justTodayTable.innerHTML = ``
+
+            for (let k=0; k<1; k++) {
+                let todaysRow =`<tr>
+                                <td>${res.daily.time[k].slice(5)}</td>
+                                <td>${res.daily.temperature_2m_max[k]}</td>
+                                <td>${res.daily.temperature_2m_min[k]}</td>
+                                <td>${res.daily.sunrise[k].slice(11)}</td>
+                                <td>${res.daily.sunset[k].slice(11)}</td>
+                                <td>${res.daily.rain_sum[k]}</td>
+                                <td>${res.daily.snowfall_sum[k]}</td>
+                                <td>${res.daily.windspeed_10m_max[k]}</td>
+                                <td>${res.daily.winddirection_10m_dominant[k]}</td>
+                                </tr>`
+                justTodayTable.innerHTML += todaysRow
+            }
+            console.log(justTodayTable.innerHTML)
+
+
+            //Hourly Forecast Code
+            let hourlyTable = document.querySelector("#hourlyAll")
+            hourlyTable.innerHTML = ``
+
+            for (let j=0; j < 25; j++) {
+                let hourlyRows=`<tr>
+                                <td>${res.hourly.time[j].slice(11)}</td>
+                                <td>${res.hourly.temperature_2m[j]}</td>
+                                <td>${res.hourly.cloudcover_low[j]}</td>
+                                <td>${res.hourly.relativehumidity_2m[j]}</td>
+                                <td>${res.hourly.rain[j]}</td>
+                                <td>${res.hourly.snowfall[j]}</td>
+                                <td>${res.hourly.windspeed_10m[j]}</td>
+                                </tr>`
+                hourlyTable.innerHTML += hourlyRows
+            }
+            console.log(hourlyTable.innerHTML)
+
+
+
             //7 Day Forecast Code
             let dataTable = document.querySelector("#cellAll")
             dataTable.innerHTML = ``
@@ -140,24 +181,6 @@ async function getData () {
                 dataTable.innerHTML += rows
             }
             console.log(dataTable.innerHTML)
-
-            //Hourly Forecast Code
-            let hourlyTable = document.querySelector("#hourlyAll")
-            hourlyTable.innerHTML = ``
-
-            for (let j=0; j < 25; j++) {
-                let hourlyRows=`<tr>
-                                <td>${res.hourly.time[j].slice(11)}</td>
-                                <td>${res.hourly.temperature_2m[j]}</td>
-                                <td>${res.hourly.cloudcover_low[j]}</td>
-                                <td>${res.hourly.relativehumidity_2m[j]}</td>
-                                <td>${res.hourly.rain[j]}</td>
-                                <td>${res.hourly.snowfall[j]}</td>
-                                <td>${res.hourly.windspeed_10m[j]}</td>
-                                </tr>`
-                hourlyTable.innerHTML += hourlyRows
-            }
-            console.log(hourlyTable.innerHTML)
             }
         addCellValues()
     })

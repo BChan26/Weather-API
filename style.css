@@ -31,3 +31,5 @@ table, tr, th, td {
     border: 1px solid rgb(65, 87, 75);
     text-align:center;
 }
+
+/*Set table max width to prevent it from getting too big*/
