@@ -44,28 +44,6 @@ buttonTodayHide.addEventListener("click", hideToday)
 
 
 
-/////////////////////////////Toggling Map//////////////////////////////////////
-//https://www.w3schools.com/jsref/prop_style_display.asp
-//Function to show latitude/longitude map
-const showMap = () => {
-    document.querySelector("#map").style.display = `flex`
-}
-
-//Show map button (which has to come after function)
-let buttonToggleMap = document.querySelector("#buttonToggleMap")
-buttonToggleMap.addEventListener("click", showMap)
-
-//Function to hide latitude/longitude map
-const hideMap = () => {
-    document.querySelector("#map").style.display = `none`
-}
-
-//Hide map button (which has to come after function)
-let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
-toggleMapSwitch.addEventListener("click", hideMap)
-
-
-
 /////////////////////////////Toggling Hourly Table/////////////////////////////
 //Function to show hourly table
 const showHourly = () => {
@@ -107,6 +85,27 @@ let sevenToggleHide = document.querySelector("#sevenHide")
 sevenToggleHide.addEventListener("click", hideSevenDay)
 
 
+
+
+/////////////////////////////Toggling Map//////////////////////////////////////
+//https://www.w3schools.com/jsref/prop_style_display.asp
+//Function to show latitude/longitude map
+const showMap = () => {
+    document.querySelector("#map").style.display = `flex`
+}
+
+//Show map button (which has to come after function)
+let buttonToggleMap = document.querySelector("#buttonToggleMap")
+buttonToggleMap.addEventListener("click", showMap)
+
+//Function to hide latitude/longitude map
+const hideMap = () => {
+    document.querySelector("#map").style.display = `none`
+}
+
+//Hide map button (which has to come after function)
+let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
+toggleMapSwitch.addEventListener("click", hideMap)
 
 
 

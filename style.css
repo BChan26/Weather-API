@@ -5,7 +5,6 @@
         max-height: auto;
     }
 }
-    
 
 /*Gradient Resource: https://www.w3schools.com/css/css3_gradients.asp*/
 *{
@@ -13,25 +12,39 @@
     background-attachment: fixed;
 }
 
-
-h1, #locator, #geolocation, #map, #inputBoxes, #weatherButtons, #timezoneText, #yourWeatherWith {
+/*Getting things aligned to the center*/
+h1, #locator, #geolocation, #map, #inputBoxes, #weatherButtons, #timezoneText {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+/*Getting toggling buttons to space evenly in-line*/
 #allButtonsTotal {
     display: flex;
     flex-direction: center;
     justify-content:space-evenly;
 }
 
+/*All button styling*/
 #todaysShow, #todaysHide, #hourlyShow, #hourlyHide, #sevenShow, #sevenHide, #buttonToggleMap, #toggleMapSwitch, #location, #usaButton, #metricButton {
     border:1 px solid rgb(65, 87, 75);
     border-radius: 8px;
 }
 
+#weatherButtons {
+    padding: 10px 10px 10px 10px;
+}
+
+/*Getting toggled table data to be centered*/
+#allTodaysContent, #allHourlyContent, #allSevenDayContent {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
 /*https://www.w3schools.com/jsref/prop_style_display.asp*/
+/*Getting elements to stay hidden to start*/
 #map, #hourlyForecast, #sevenDay {
     display: none;
 }
@@ -40,8 +53,4 @@ h1, #locator, #geolocation, #map, #inputBoxes, #weatherButtons, #timezoneText, #
 tr, th, td {
     border: 1px solid rgb(65, 87, 75);
     text-align:center;
-}
-
-#weatherButtons {
-    padding: 10px 10px 10px 10px;
 }

@@ -3,14 +3,12 @@
 ### [Trello Invite Link to View](https://trello.com/invite/b/8Jibxuu4/750705a2f1c82f0abe6ff47730fcf268/weather-api "Trello")
 
 ### Description: 
-- I have created a weather app that tells you the 7 day forecast based on your latitude and longitude.
+- I have created a weather app that tells your forecast based on your latitude and longitude.
 
 ### Features:
-- 2 methods for finding your latitude and longitude (If you allow location access, it autofills them)
+- 2 methods for finding your latitude and longitude (If you allow location access, it autofills)
 - Weather with either Imperial (U.S.A) Units or Metric Units
-- Your Basic Information
-    - Time Zone
-    - Today's Forecast
+- Today's Forecast
 - Hourly Forecast
     - Time
     - Temp

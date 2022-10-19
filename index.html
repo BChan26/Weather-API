@@ -12,9 +12,8 @@
 
 <body>
 
-<!--Title-->
+<!--Title, with image sources from clipartmax.com-->
 <h1><img src="Assets/ClipArtMax Weather Report.png" width="30%"></h1>
-
 
 <div id="box1">
         <!--Button to find latitude and longitude-->
@@ -44,14 +43,15 @@
 
 <!--Line Break-->
 <hr>
-<div id="yourWeatherWith">Click Below For Your Forecast With: </div>
+
+<!--Buttons to Run Metric or Imperial Functions-->
 <form id="weatherButtons">
         <input type="button"
                 id="usaButton"
-                value="Imperial Units"/>
+                value="Click For Your Forecast with Imperial Units"/>
         <input type="button"
                 id="metricButton"
-                value="Metric Units"/>
+                value="Click For Your Forecast with Metric Units"/>
 </form>
 
 <!--Result: Time Zone(unchanging)-->
@@ -59,8 +59,11 @@
 
 <!--Line Break-->
 <hr>
-<!--Buttons to Show/Hide Hourly Forecast-->
+
+<!--Buttons to Show/Hide Forecasts-->
 <form id="allButtonsTotal">
+        
+        <!--Buttons to Show/Hide Today's Forecasts-->
         <input type = "button"
                 id = "todaysShow"
                 value = "Show Today">
@@ -68,7 +71,7 @@
                 id = "todaysHide"
                 value = "Hide Today">
 
-
+        <!--Buttons to Show/Hide Hourly Forecasts-->
         <input type = "button"
                 id="hourlyShow"
                 value="Show Hourly">
@@ -76,8 +79,7 @@
                 id="hourlyHide"
                 value="Hide Hourly">
 
-<!--Buttons to Show/Hide 7 Day Forecast-->
-
+        <!--Buttons to Show/Hide 7 Day Forecast-->
         <input type = "button"
                 id="sevenShow"
                 value="Show 7-Day">
@@ -87,20 +89,18 @@
 
 
         <!--Buttons to Show and Hide Map-->
-
                 <input type = "button"
                         id="buttonToggleMap"
                         value="Show Lat/Long Map">
                 <input type = "button"
                         id="toggleMapSwitch"
                         value="Hide Lat/Long Map">
-
 </form>
 
 <!--Line Break-->
 <hr>
 
-<!--Today's Forecast Only-->
+<!--Today's Forecast Table-->
 <div id="allTodaysContent">
 <table id="todaysForecast">
         <thead id="todaysForecastHead">
@@ -132,13 +132,13 @@
         </tbody>
 </table>
 </div>
+
 <!--Line Break-->
 <hr>
 
-<div id="allHourlyContent">
-
 <!--Hourly Forecast Table-->
-<table id="hourlyForecast">
+<div id="allHourlyContent">
+        <table id="hourlyForecast">
         <thead>
                 <tr>
                         <th>Hourly </th>
@@ -162,14 +162,15 @@
         
         <tbody id="hourlyAll">
         </tbody>
-</table>
+        </table>
 </div>
+
 <!--Line Break-->
 <hr>
 
-<div id="allSevenDayContent">
 <!--7 Day Forecast Table-->
-<table id="sevenDay">
+<div id="allSevenDayContent">
+        <table id="sevenDay">
         <thead>
                 <tr>
                         <th>7-Day</th>
@@ -197,7 +198,7 @@
         
         <tbody id="sevenDayData">
         </tbody>
-</table>
+        </table>
 </div>
 
 <!--Line Break-->
@@ -207,9 +208,6 @@
 <div id="map">
 <img src="Assets/Transparent Map.png"/>
 </div>
-
-
-
 
 <!--Links HTML to Javascript-->
 <script src="script.js"></script>
