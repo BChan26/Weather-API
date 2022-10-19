@@ -41,6 +41,7 @@
     - Customizing colors and table elements (like borders)
     - How to apply a gradient background to the entire page
     - How to use the "display" style with a value of 'none' and 'flex' and 'block' to show/hide my HTML elements
+    - Responsive CSS with resizing of the screen used
 - Javascript: 
     - How to utilize navigator.geolocation property & getCurrentPosition() method to find the latitude/longitude
     - How to utilize document.querySelector to connect our HTML and Javascript files (DOM)

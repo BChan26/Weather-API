@@ -49,7 +49,7 @@ toggleMapSwitch.addEventListener("click", hideMap)
 /////////////////////////////Toggling Hourly Table/////////////////////////////
 //Function to show hourly table
 const showHourly = () => {
-    document.querySelector("#hourly").style.display = `block`
+    document.querySelector("#hourlyForecast").style.display = `block`
 }
 
 //Show hourly button (which has to come after function)
@@ -58,7 +58,7 @@ hourlyToggleShow.addEventListener("click", showHourly)
 
 //Function to hide hourly table
 const hideHourly = () => {
-    document.querySelector("#hourly").style.display = `none`
+    document.querySelector("#hourlyForecast").style.display = `none`
 }
 
 //Hide hourly button (which has to come after function)
@@ -85,6 +85,8 @@ const hideSevenDay = () => {
 //Hide 7 Day Table (which has to come after function)
 let sevenToggleHide = document.querySelector("#sevenHide")
 sevenToggleHide.addEventListener("click", hideSevenDay)
+
+
 
 
 
@@ -156,7 +158,7 @@ async function getImperialData () {
             }
 
             //7 Day Forecast
-            let dataTable = document.querySelector("#cellAll")
+            let dataTable = document.querySelector("#sevenDayData")
             dataTable.innerHTML = ``
 
             for (let i=0; i < res.daily.time.length; i ++) {
@@ -186,6 +188,11 @@ async function getImperialData () {
 usaButton.addEventListener("click", () => {
     getImperialData()
 })
+
+
+
+
+
 
 ///////////////////////////////METRIC API CALL/////////////////////////////////////
 //function to connect to API and display relevant data for METRIC
@@ -254,7 +261,7 @@ async function getMetricData () {
             }
 
             //7 Day Forecast
-            let dataTable = document.querySelector("#cellAll")
+            let dataTable = document.querySelector("#sevenDayData")
             dataTable.innerHTML = ``
 
             for (let i=0; i < res.daily.time.length; i ++) {
@@ -284,23 +291,3 @@ async function getMetricData () {
 metricButton.addEventListener("click", () => {
     getMetricData()
 })
-
-
-// //////////////Event Listener for Enter Button & Imperial/////////////////////
-// //https://www.w3schools.com/HOWTO/howto_js_trigger_button_enter.asp
-
-// //Event listener for hitting enter button, associated with the longitude box
-// textLongitude.addEventListener("keypress", (event) => {
-//     if (event.key === "Enter") {
-//         event.preventDefault()
-//         getImperialData()
-//     }
-// })
-
-// //Event listener for hitting enter button, associated with the latitude box
-// textLatitude.addEventListener("keypress", (event) => {
-//     if (event.key === "Enter") {
-//         event.preventDefault()
-//         getImperialData()
-//     }
-// })

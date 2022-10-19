@@ -1,3 +1,12 @@
+/*Referenced October 12th lesson on responsive CSS & W3Schools & Tiffany*/
+@media screen and (max-width: 743px) {
+#map #todaysForecast, #hourlyForecast, #sevenDay {
+        max-width: 100%;
+        max-height: auto;
+    }
+}
+    
+
 /*Gradient Resource: https://www.w3schools.com/css/css3_gradients.asp*/
 *{
     background-image: linear-gradient(to top right, #0086d3, #fcffae);
@@ -18,8 +27,8 @@ h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMa
 }
 
 /*https://www.w3schools.com/jsref/prop_style_display.asp*/
-#map, #hourly, #sevenDay {
-    display: none
+#map, #hourlyForecast, #sevenDay {
+    display: none;
 }
 
 /*Referenced tic-tac-toe homework, to get a border for the table and cells*/
