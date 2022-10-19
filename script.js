@@ -11,8 +11,6 @@ let metricButton = document.querySelector("#metricButton")
 //Uses navigator.geolocation to get location, with method "getCurrentPosition"
 const locationFinder = () => {
     navigator.geolocation.getCurrentPosition((position) => {
-        let calculatedLatAndLong = document.querySelector("#calculatedLatAndLong")
-        calculatedLatAndLong.innerText = `Your latitude is ${position.coords.latitude} & longitude is ${position.coords.longitude}.`
         //These 2 lines change the value inside of the lat/long input boxes
         textLatitude.value = position.coords.latitude
         textLongitude.value = position.coords.longitude
@@ -21,6 +19,28 @@ const locationFinder = () => {
 //variable to connect button to Javascript, with event listener to execute the function
 let myLocation = document.querySelector("#location")
 myLocation.addEventListener("click", locationFinder)
+
+
+
+/////////////////////////////Toggling Today//////////////////////////////////////
+//https://www.w3schools.com/jsref/prop_style_display.asp
+//Function to show today's weather
+const showToday = () => {
+    document.querySelector("#todaysForecast").style.display = `block`
+}
+
+//Show today's button (which has to come after function)
+let buttonTodayShow = document.querySelector("#todaysShow")
+buttonTodayShow.addEventListener("click", showToday)
+
+//Function to hide today's weather
+const hideToday = () => {
+    document.querySelector("#todaysForecast").style.display = `none`
+}
+
+//Show today's button (which has to come after function)
+let buttonTodayHide = document.querySelector("#todaysHide")
+buttonTodayHide.addEventListener("click", hideToday)
 
 
 
@@ -110,8 +130,8 @@ async function getImperialData () {
         console.log(res)
 
         //Time Zone
-        let timeZone = document.querySelector("#timezone")
-        timeZone.innerText = res.timezone
+        //let timeZone = document.querySelector("#timezone")
+        //timeZone.innerText = res.timezone
 
         //Forecast Data Tables
         //Referenced https://www.youtube.com/watch?v=XmdOZ5NSqb8
@@ -213,8 +233,8 @@ async function getMetricData () {
         console.log(res)
 
         //Time Zone
-        let timeZone = document.querySelector("#timezone")
-        timeZone.innerText = res.timezone
+        //let timeZone = document.querySelector("#timezone")
+        //timeZone.innerText = res.timezone
 
         //Forecast Data Tables
         //Referenced https://www.youtube.com/watch?v=XmdOZ5NSqb8

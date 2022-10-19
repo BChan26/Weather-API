@@ -1,6 +1,6 @@
 /*Referenced October 12th lesson on responsive CSS & W3Schools & Tiffany*/
 @media screen and (max-width: 743px) {
-#map #todaysForecast, #hourlyForecast, #sevenDay {
+#map #allTodaysContent, #allHourlyContent, #allSevenDayContent {
         max-width: 100%;
         max-height: auto;
     }
@@ -13,17 +13,22 @@
     background-attachment: fixed;
 }
 
-/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
-#box3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-h1, #locator, #geolocation, #calculatedLatAndLong, #toggleMap, #explanationForMap, #map, #searchBar, #timezoneText {
+h1, #locator, #geolocation, #map, #inputBoxes, #weatherButtons, #timezoneText, #yourWeatherWith {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+#allButtonsTotal {
+    display: flex;
+    flex-direction: center;
+    justify-content:space-evenly;
+}
+
+#todaysShow, #todaysHide, #hourlyShow, #hourlyHide, #sevenShow, #sevenHide, #buttonToggleMap, #toggleMapSwitch, #location, #usaButton, #metricButton {
+    border:1 px solid rgb(65, 87, 75);
+    border-radius: 8px;
 }
 
 /*https://www.w3schools.com/jsref/prop_style_display.asp*/
@@ -37,6 +42,6 @@ tr, th, td {
     text-align:center;
 }
 
-#box1, #box2 {
-    border: 1px solid rgb(65, 87, 75); 
+#weatherButtons {
+    padding: 10px 10px 10px 10px;
 }

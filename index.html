@@ -13,87 +13,99 @@
 <body>
 
 <!--Title-->
-<h1>Weather Forecast</h1>
+<h1><img src="Assets/ClipArtMax Weather Report.png" width="30%"></h1>
 
-<!--Div box3 for all location finding & flex, with box1=geolocation and box2=map-->
-<div id="box3">
-        <!--Div Box1 to align left-->
-        <div id="box1">
-                <!--Button to find latitude and longitude-->
-                <form id="locator">
-                        <input type = "button"
-                                id="location"
-                                value="Click to Find Your Latitude & Longitude"/>
-                </form>
 
-                <!--Explanation about required permissions-->
-                <p id="geolocation">Browser Will Need Location Permission, Takes ~7 seconds:</p>
+<div id="box1">
+        <!--Button to find latitude and longitude-->
+        <form id="locator">
+                <input type = "button"
+                        id="location"
+                        value="Click to Find Your Latitude & Longitude"/>
+        </form>
 
-                <!--Text will appear after button is clicked-->
-                <p id="calculatedLatAndLong"></p>
-        </div>
-
-        <!--Div Box2 to align right-->
-        <div id="box2">
-                <!--Buttons to Show and Hide Map-->
-                <form id="toggleMap">
-                        <input type = "button"
-                                id="buttonToggleMap"
-                                value="Show Map">
-                        <input type = "button"
-                                id="toggleMapSwitch"
-                                value="Hide Map">
-                </form>
-
-                <!--Explanation of map-->
-                <p id="explanationForMap">Without using location data, find them with this map:</p>
-
-                <!--Toggleable Map-->
-                <div id="map">
-                <img src="Assets/Transparent Map.png"/>
-                </div>
-        </div>
+        <!--Explanation about required permissions-->
+        <p id="geolocation">Needs Location Permission (~5 sec)</p>
 </div>
 
-<!--Line Break-->
-<hr>
-
-<!--Latitude and Longitude Input + Search Button-->
-<form id="searchBar">
+<!--Latitude and Longitude Input-->
+<form id="inputBoxes">
         <input type="text"
                 placeholder = "Latitude"
                 id="latitude"
-                style="width: 10%"
+                style="width: 7%"
                 value="" />
         <input type="text"
                 placeholder = "Longitude"
                 id="longitude"
-                style="width: 10%"
+                style="width: 7%"
                 value="" />
+</form>
 
+<!--Line Break-->
+<hr>
+<div id="yourWeatherWith">Click Below For Your Forecast With: </div>
+<form id="weatherButtons">
         <input type="button"
                 id="usaButton"
-                value="Weather with Imperial units"/>
+                value="Imperial Units"/>
         <input type="button"
                 id="metricButton"
-                value="Weather with Metric units"/>
+                value="Metric Units"/>
+</form>
+
+<!--Result: Time Zone(unchanging)-->
+<!--<div id="timezoneText">Current Time Zone: <div id="timezone"></div></div>-->
+
+<!--Line Break-->
+<hr>
+<!--Buttons to Show/Hide Hourly Forecast-->
+<form id="allButtonsTotal">
+        <input type = "button"
+                id = "todaysShow"
+                value = "Show Today">
+        <input type = "button"
+                id = "todaysHide"
+                value = "Hide Today">
+
+
+        <input type = "button"
+                id="hourlyShow"
+                value="Show Hourly">
+        <input type = "button"
+                id="hourlyHide"
+                value="Hide Hourly">
+
+<!--Buttons to Show/Hide 7 Day Forecast-->
+
+        <input type = "button"
+                id="sevenShow"
+                value="Show 7-Day">
+        <input type = "button"
+                id="sevenHide"
+                value="Hide 7-Day">
+
+
+        <!--Buttons to Show and Hide Map-->
+
+                <input type = "button"
+                        id="buttonToggleMap"
+                        value="Show Lat/Long Map">
+                <input type = "button"
+                        id="toggleMapSwitch"
+                        value="Hide Lat/Long Map">
+
 </form>
 
 <!--Line Break-->
 <hr>
 
-<!--Result: Time Zone(unchanging)-->
-        <div id="timezoneText">Time Zone: <div id="timezone"></div></div>
-
-<!--Line Break-->
-<hr>
-
 <!--Today's Forecast Only-->
-<h2>Today's Forecast</h2>
+<div id="allTodaysContent">
 <table id="todaysForecast">
-        <thead>
+        <thead id="todaysForecastHead">
                 <tr>
-                        <th>Date</th>
+                        <th>Today's Date</th>
                         <th>High Temp</th>
                         <th>Low Temp</th>
                         <th>Sunrise</th>
@@ -119,28 +131,17 @@
         <tbody id="todayOnly">
         </tbody>
 </table>
-
+</div>
 <!--Line Break-->
 <hr>
 
-<!--Hourly Forecast, with icons sourced from icons8.com-->
-<h2>Today's Hourly Forecast</h2>
-
-<!--Buttons to Show/Hide Hourly Forecast-->
-<form id="hourlyShowHide">
-        <input type = "button"
-                id="hourlyShow"
-                value="Show Hourly Forecast">
-        <input type = "button"
-                id="hourlyHide"
-                value="Hide Hourly Forecast">
-</form>
+<div id="allHourlyContent">
 
 <!--Hourly Forecast Table-->
 <table id="hourlyForecast">
         <thead>
                 <tr>
-                        <th>Time </th>
+                        <th>Hourly </th>
                         <th>Temperature</th>
                         <th>Low Cloud Cover</th>
                         <th>Humidity</th>
@@ -162,29 +163,16 @@
         <tbody id="hourlyAll">
         </tbody>
 </table>
-
+</div>
 <!--Line Break-->
 <hr>
 
-
-<!--7 Day Forecast, with icons sourced from icons8.com-->
-<h2>7 Day Forecast</h2>
-
-<!--Buttons to Show/Hide 7 Day Forecast-->
-<form id="sevenShowHide">
-        <input type = "button"
-                id="sevenShow"
-                value="Show 7-Day Forecast">
-        <input type = "button"
-                id="sevenHide"
-                value="Hide 7-Day Forecast">
-</form>
-
+<div id="allSevenDayContent">
 <!--7 Day Forecast Table-->
 <table id="sevenDay">
         <thead>
                 <tr>
-                        <th>Date</th>
+                        <th>7-Day</th>
                         <th>High Temp</th>
                         <th>Low Temp</th>
                         <th>Sunrise</th>
@@ -210,6 +198,18 @@
         <tbody id="sevenDayData">
         </tbody>
 </table>
+</div>
+
+<!--Line Break-->
+<hr>
+
+<!--Toggleable Map-->
+<div id="map">
+<img src="Assets/Transparent Map.png"/>
+</div>
+
+
+
 
 <!--Links HTML to Javascript-->
 <script src="script.js"></script>
