@@ -57,6 +57,7 @@
 - General: 
     - The importance of planning ahead and starting early, so glaring errors (like keys not working) can be addressed
     - Working together with classmates and brainstorming/troubleshooting
+    - How to branch in Github
 
 ### Credits:  
 - [Open-Meteo Weather API](https://open-meteo.com/en/docs "Open-Meteo Weather API")
@@ -78,4 +79,3 @@
 - People Who Supported Me
     - SEI Instructional Team (Jeremy/Tiffany/Brittany/Kristina/Tylus) for guidance, suggestions, and problem solving
     - SEI Classmates (Everyone) for brainstorming, sharing ideas, and keeping me company in Zoom breakout rooms
-    - A classmate's significant other who helped clarify the units needed for latitude/longitude

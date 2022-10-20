@@ -1,6 +1,6 @@
 /*Referenced October 12th lesson on responsive CSS & W3Schools & Tiffany*/
 @media screen and (max-width: 743px) {
-#map #allTodaysContent, #allHourlyContent, #allSevenDayContent {
+#map, #allTodaysContent, #allHourlyContent, #allSevenDayContent {
         max-width: 100%;
         max-height: auto;
     }
@@ -12,8 +12,8 @@
     background-attachment: fixed;
 }
 
-/*Getting things aligned to the center*/
-h1, #locator, #geolocation, #map, #inputBoxes, #weatherButtons, #timezoneText {
+/*Using flex to align to the center*/
+h1, #locator, #geolocation, #inputBoxes, #weatherButtons, #map {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +27,7 @@ h1, #locator, #geolocation, #map, #inputBoxes, #weatherButtons, #timezoneText {
 }
 
 /*All button styling*/
-#todaysShow, #todaysHide, #hourlyShow, #hourlyHide, #sevenShow, #sevenHide, #buttonToggleMap, #toggleMapSwitch, #location, #usaButton, #metricButton {
+#todaysShow, #hourlyShow, #sevenShow, #buttonToggleMap, #location, #usaButton, #metricButton {
     border:1 px solid rgb(65, 87, 75);
     border-radius: 8px;
 }

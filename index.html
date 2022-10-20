@@ -12,20 +12,18 @@
 
 <body>
 
-<!--Title, with image sources from clipartmax.com-->
-<h1><img src="Assets/ClipArtMax Weather Report.png" width="30%"></h1>
+<!--Title, with image sourced from clipartmax.com-->
+<h1><img src="Assets/ClipArtMax Weather Report.png" width="40%"></h1>
 
-<div id="box1">
-        <!--Button to find latitude and longitude-->
-        <form id="locator">
-                <input type = "button"
-                        id="location"
-                        value="Click to Find Your Latitude & Longitude"/>
-        </form>
+<!--Button to find latitude and longitude-->
+<form id="locator">
+        <input type = "button"
+                id="location"
+                value="Find Your Latitude & Longitude"/>
+</form>
 
-        <!--Explanation about required permissions-->
-        <p id="geolocation">Needs Location Permission (~5 sec)</p>
-</div>
+<!--Explanation about required permissions-->
+<p id="geolocation">Needs Location Permission (~5 sec)</p>
 
 <!--Latitude and Longitude Input-->
 <form id="inputBoxes">
@@ -48,53 +46,37 @@
 <form id="weatherButtons">
         <input type="button"
                 id="usaButton"
-                value="Click For Your Forecast with Imperial Units"/>
+                value="Forecast + Imperial Units"/>
         <input type="button"
                 id="metricButton"
-                value="Click For Your Forecast with Metric Units"/>
+                value="Forecast + Metric Units"/>
 </form>
-
-<!--Result: Time Zone(unchanging)-->
-<!--<div id="timezoneText">Current Time Zone: <div id="timezone"></div></div>-->
 
 <!--Line Break-->
 <hr>
 
-<!--Buttons to Show/Hide Forecasts-->
+<!--Buttons to Show Forecasts-->
 <form id="allButtonsTotal">
         
-        <!--Buttons to Show/Hide Today's Forecasts-->
+        <!--Buttons to Show Today's Forecasts-->
         <input type = "button"
                 id = "todaysShow"
-                value = "Show Today">
-        <input type = "button"
-                id = "todaysHide"
-                value = "Hide Today">
+                value = "Today">
 
-        <!--Buttons to Show/Hide Hourly Forecasts-->
+        <!--Buttons to Show Hourly Forecasts-->
         <input type = "button"
                 id="hourlyShow"
-                value="Show Hourly">
-        <input type = "button"
-                id="hourlyHide"
-                value="Hide Hourly">
+                value="Hourly">
 
-        <!--Buttons to Show/Hide 7 Day Forecast-->
+        <!--Buttons to Show 7 Day Forecast-->
         <input type = "button"
                 id="sevenShow"
-                value="Show 7-Day">
-        <input type = "button"
-                id="sevenHide"
-                value="Hide 7-Day">
+                value="7 Day">
 
-
-        <!--Buttons to Show and Hide Map-->
+        <!--Buttons to Show Map-->
                 <input type = "button"
                         id="buttonToggleMap"
-                        value="Show Lat/Long Map">
-                <input type = "button"
-                        id="toggleMapSwitch"
-                        value="Hide Lat/Long Map">
+                        value="Lat/Long Map">
 </form>
 
 <!--Line Break-->
@@ -103,7 +85,7 @@
 <!--Today's Forecast Table-->
 <div id="allTodaysContent">
 <table id="todaysForecast">
-        <thead id="todaysForecastHead">
+        <thead>
                 <tr>
                         <th>Today's Date</th>
                         <th>High Temp</th>
@@ -124,7 +106,7 @@
                         <th><img src="Assets/icons8-rain-64.png"></th>
                         <th><img src="Assets/icons8-snow-64.png"></th>
                         <th><img src="Assets/icons8-windsock-64.png"></th>
-                        <th><img src="Assets/Transparent Wind Directions.png" width="150px" height="150px"></th>
+                        <th><img src="Assets/Transparent Wind Directions.png" width="200px" height="200px"></th>
                 </tr>
         </thead>
         
@@ -132,9 +114,6 @@
         </tbody>
 </table>
 </div>
-
-<!--Line Break-->
-<hr>
 
 <!--Hourly Forecast Table-->
 <div id="allHourlyContent">
@@ -165,9 +144,6 @@
         </table>
 </div>
 
-<!--Line Break-->
-<hr>
-
 <!--7 Day Forecast Table-->
 <div id="allSevenDayContent">
         <table id="sevenDay">
@@ -192,7 +168,7 @@
                         <th><img src="Assets/icons8-rain-64.png"></th>
                         <th><img src="Assets/icons8-snow-64.png"></th>
                         <th><img src="Assets/icons8-windsock-64.png"></th>
-                        <th><img src="Assets/Transparent Wind Directions.png" width="150px" height="150px"></th>
+                        <th><img src="Assets/Transparent Wind Directions.png" width="200px" height="200px"></th>
                 </tr>
         </thead>
         
@@ -200,9 +176,6 @@
         </tbody>
         </table>
 </div>
-
-<!--Line Break-->
-<hr>
 
 <!--Toggleable Map-->
 <div id="map">

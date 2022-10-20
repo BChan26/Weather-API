@@ -1,12 +1,11 @@
-/////////Globally created variables, connecting HTML's ID to Javascript/////////
-let usaButton = document.querySelector("#usaButton")
+///////////////Globally created variables, connecting HTML's ID to Javascript//////////////
 let textLatitude = document.querySelector("#latitude")
 let textLongitude = document.querySelector("#longitude")
+let usaButton = document.querySelector("#usaButton")
 let metricButton = document.querySelector("#metricButton")
 
 
-
-///////////////////////////////Geolocation//////////////////////////////////
+////////////////////////////////////////Geolocation////////////////////////////////////////
 //https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/longitude
 //Uses navigator.geolocation to get location, with method "getCurrentPosition"
 const locationFinder = () => {
@@ -16,101 +15,66 @@ const locationFinder = () => {
         textLongitude.value = position.coords.longitude
     })
 }
-//variable to connect button to Javascript, with event listener to execute the function
+//variable to connect button to JS, with event listener to execute the function
 let myLocation = document.querySelector("#location")
 myLocation.addEventListener("click", locationFinder)
 
 
-
-/////////////////////////////Toggling Today//////////////////////////////////////
+//////////////////////////////////Toggling Today//////////////////////////////////////////
 //https://www.w3schools.com/jsref/prop_style_display.asp
 //Function to show today's weather
 const showToday = () => {
     document.querySelector("#todaysForecast").style.display = `block`
+    document.querySelector("#hourlyForecast").style.display = `none`
+    document.querySelector("#sevenDay").style.display = `none`
+    document.querySelector("#map").style.display = `none`
 }
-
 //Show today's button (which has to come after function)
 let buttonTodayShow = document.querySelector("#todaysShow")
 buttonTodayShow.addEventListener("click", showToday)
 
-//Function to hide today's weather
-const hideToday = () => {
-    document.querySelector("#todaysForecast").style.display = `none`
-}
 
-//Show today's button (which has to come after function)
-let buttonTodayHide = document.querySelector("#todaysHide")
-buttonTodayHide.addEventListener("click", hideToday)
-
-
-
-/////////////////////////////Toggling Hourly Table/////////////////////////////
+//////////////////////////////////Toggling Hourly Table//////////////////////////////////
 //Function to show hourly table
 const showHourly = () => {
+    document.querySelector("#todaysForecast").style.display = `none`
     document.querySelector("#hourlyForecast").style.display = `block`
+    document.querySelector("#sevenDay").style.display = `none`
+    document.querySelector("#map").style.display = `none`
 }
-
 //Show hourly button (which has to come after function)
 let hourlyToggleShow = document.querySelector("#hourlyShow")
 hourlyToggleShow.addEventListener("click", showHourly)
 
-//Function to hide hourly table
-const hideHourly = () => {
-    document.querySelector("#hourlyForecast").style.display = `none`
-}
 
-//Hide hourly button (which has to come after function)
-let hourlyToggleHide = document.querySelector("#hourlyHide")
-hourlyToggleHide.addEventListener("click", hideHourly)
-
-
-
-///////////////////////////Toggling 7-Day Table//////////////////////////////
+////////////////////////////////Toggling 7-Day Table///////////////////////////////////
 //Function to show 7 day table
 const showSevenDay = () => {
+    document.querySelector("#todaysForecast").style.display = `none`
+    document.querySelector("#hourlyForecast").style.display = `none`
     document.querySelector("#sevenDay").style.display = `block`
+    document.querySelector("#map").style.display = `none`
 }
-
 //Show 7 day table (which has to come after function)
 let sevenToggleShow = document.querySelector("#sevenShow")
 sevenToggleShow.addEventListener("click", showSevenDay)
-
-//Function to hide 7 day table
-const hideSevenDay = () => {
-    document.querySelector("#sevenDay").style.display = `none`
-}
-
-//Hide 7 Day Table (which has to come after function)
-let sevenToggleHide = document.querySelector("#sevenHide")
-sevenToggleHide.addEventListener("click", hideSevenDay)
-
-
 
 
 /////////////////////////////Toggling Map//////////////////////////////////////
 //https://www.w3schools.com/jsref/prop_style_display.asp
 //Function to show latitude/longitude map
 const showMap = () => {
+    document.querySelector("#todaysForecast").style.display = `none`
+    document.querySelector("#hourlyForecast").style.display = `none`
+    document.querySelector("#sevenDay").style.display = `none`
     document.querySelector("#map").style.display = `flex`
 }
-
 //Show map button (which has to come after function)
 let buttonToggleMap = document.querySelector("#buttonToggleMap")
 buttonToggleMap.addEventListener("click", showMap)
 
-//Function to hide latitude/longitude map
-const hideMap = () => {
-    document.querySelector("#map").style.display = `none`
-}
 
-//Hide map button (which has to come after function)
-let toggleMapSwitch = document.querySelector("#toggleMapSwitch")
-toggleMapSwitch.addEventListener("click", hideMap)
-
-
-
-//////////////////////////////IMPERIAL API CALL////////////////////////////////
-
+////////////////////////////////////IMPERIAL API CALL//////////////////////////////////////
 //function to connect to API and display relevant data for IMPERIAL
 async function getImperialData () {
     
@@ -128,13 +92,9 @@ async function getImperialData () {
         //console log to get full API call
         console.log(res)
 
-        //Time Zone
-        //let timeZone = document.querySelector("#timezone")
-        //timeZone.innerText = res.timezone
-
         //Forecast Data Tables
         //Referenced https://www.youtube.com/watch?v=XmdOZ5NSqb8
-        //Learned to create a new row each time, using .innerHTML to recognize the row/cells being added (instead of just using innertext)
+        //Learned to create a new row each time, using .innerHTML to recognize the row/cells being added
         //Referenced https://www.w3schools.com/js/js_string_methods.asp
         //Learned to slice to clean up text for date/sunrise/sunset
         //Robert from class also helped me brainstorm to apply math to values as needed
@@ -202,18 +162,13 @@ async function getImperialData () {
         console.log(`Error!`, err)
     })
 }
-
 //search button, upon click runs the getImperialData function for results, comes after
 usaButton.addEventListener("click", () => {
     getImperialData()
 })
 
 
-
-
-
-
-///////////////////////////////METRIC API CALL/////////////////////////////////////
+////////////////////////////////////METRIC API CALL//////////////////////////////////////////
 //function to connect to API and display relevant data for METRIC
 async function getMetricData () {
     
@@ -231,16 +186,14 @@ async function getMetricData () {
         //console log to get full API call
         console.log(res)
 
-        //Time Zone
-        //let timeZone = document.querySelector("#timezone")
-        //timeZone.innerText = res.timezone
-
         //Forecast Data Tables
         //Referenced https://www.youtube.com/watch?v=XmdOZ5NSqb8
-        //Learned to create a new row each time, using .innerHTML to recognize the row/cells being added (instead of just using innertext)
+        //Learned to create a new row each time, using .innerHTML to recognize the row/cells being added
         //Referenced https://www.w3schools.com/js/js_string_methods.asp
         //Learned to slice to clean up text for date/sunrise/sunset
         //Robert from class also helped me brainstorm to apply math to values as needed
+        
+        //Kept the same function name, but changed the math inside the cells
         const myWeatherImperial = () => {
             
             //Just Today's Forecast
@@ -305,7 +258,6 @@ async function getMetricData () {
         console.log(`Error!`, err)
     })
 }
-
 //search button, upon click runs the getMetricData function for results, comes after
 metricButton.addEventListener("click", () => {
     getMetricData()
