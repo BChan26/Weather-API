@@ -1,6 +1,9 @@
 # Project Title: Weather-API
 
-### [Trello Invite Link to View](https://trello.com/invite/b/8Jibxuu4/750705a2f1c82f0abe6ff47730fcf268/weather-api "Trello")
+### [Your Weather Forecast](https://your-weather-forecast.surge.sh/ "Your Weather Forecast")
+
+![image](https://user-images.githubusercontent.com/114373959/196999425-d420b681-0f51-4857-af0b-b8bace0a4826.png)
+
 
 ### Description: 
 - I have created a weather app that tells your forecast based on your latitude and longitude.
@@ -8,16 +11,8 @@
 ### Features:
 - 2 methods for finding your latitude and longitude (If you allow location access, it autofills)
 - Weather with either Imperial (U.S.A) Units or Metric Units
-- Today's Forecast
-- Hourly Forecast
-    - Time
-    - Temp
-    - Cloud Cover
-    - Humidity
-    - Rain
-    - Snowfall
-    - Wind Speed
-- 7 Day Forecast
+
+- Today's Forecast & 7 Day Forecast
     - High Temp
     - Low Temp
     - Sunrise
@@ -26,20 +21,30 @@
     - Snowfall
     - Max Wind
     - Wind Direction
+
+- Hourly Forecast
+    - Time
+    - Temp
+    - Cloud Cover
+    - Humidity
+    - Rain
+    - Snowfall
+    - Wind Speed
+
 - If you change the latitude and longitude, then run it again, new values appear in the table
 
 ### What I've Learned/Reinforced
 - HTML: 
     - How to link the HTML file to the CSS/JS files
     - How to add images to my HTML file with relative links
-    - The different HTML elements that we can use (divs, forms, input types of text vs button, lists, line breaks, tables)
-    - The different ID's or classes we can assign to various HTML elements
+    - The various HTML elements that we can use (divs, forms, input types of text vs button, lists, line breaks, tables)
+    - The different ID's or classes we can assign to our HTML elements
 - CSS: 
     - Using flexbox to style/organize my HTML elements
     - Customizing colors and table elements (like borders)
     - How to apply a gradient background to the entire page
     - How to use the "display" style with a value of 'none' and 'flex' and 'block' to show/hide my HTML elements
-    - Responsive CSS with resizing of the screen used
+    - Responsive CSS with the resizing of the screen
 - Javascript: 
     - How to utilize navigator.geolocation property & getCurrentPosition() method to find the latitude/longitude
     - How to utilize document.querySelector to connect our HTML and Javascript files (DOM)
